@@ -10,11 +10,11 @@ Arquitectura: Cliente - Servidor
 Copia en el archivo pom.xml la siguiente dependencia:
 
 ```
-		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>mssql-jdbc</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+<dependency>
+	<groupId>com.microsoft.sqlserver</groupId>
+	<artifactId>mssql-jdbc</artifactId>
+	<scope>runtime</scope>
+</dependency>
 ```
 
 Copia en el archivo application.properties la siguiente configuración:
@@ -35,11 +35,11 @@ spring.jpa.hibernate.ddl-auto=update
 Copia en el archivo pom.xml la siguiente dependencia:
 
 ```
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+<dependency>
+	<groupId>com.mysql</groupId>
+	<artifactId>mysql-connector-j</artifactId>
+	<scope>runtime</scope>
+</dependency>
 ```
 
 Copia en el archivo application.properties la siguiente configuración:
