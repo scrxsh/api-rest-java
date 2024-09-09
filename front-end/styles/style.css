@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;   
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+i{
+    height: 20px;
+    width: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+img{
+    pointer-events: none;
+}
+
+
+.wrapper{
+    display: flex;
+}
+
+#header-dinamic{
+    min-height: 15vh;
+    overflow: hidden;
+    transition:  all 0.35s ease-in-out;
+    background: url(../images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition:  all 0.35s ease-in-out;
+    background-color: #fefeff;
+}
+
+
+#sidebar{
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: #173946;
+}
+
+#sidebar.expand{
+    width: 220px;
+    min-width: 220px;
+}
+
+#t-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+#t-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.logo-sd {
+    margin: auto 0;
+}
+
+.logo-sd a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .logo-sd,
+#sidebar:not(.expand) a.sd-link span {
+    display: none;
+}
+
+#sidebar.expand .logo-sd,
+#sidebar.expand a.sd-link span {
+    animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sd-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+
+.sd-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sd-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #2cbd70;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: #173946;
+    padding: 0;
+    min-width: 15rem;
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+    display: block;
+    max-height: 15em;
+    width: 100%;
+    opacity: 1;
+}
+
+.navbar{
+    background-color:rgba(31, 31, 31, 0.1);
+    box-shadow: 0 0 2rem rgba(33, 37, 41, .1);
+}
+
+.navbar-expand .navbar-collapse {
+    min-width: 200px;
+}
+
+
+.avatar {
+    height: 30px;
+    width: 30px;
+}
+
+.table>thead tr{
+    color: #FFF;
+    text-align: left;
+}
+
+tr.highlight th{
+    background-color: #173946;
+    color: #FFF;
+}
+
+.content{
+    flex: 1 1 auto;
+}
+
+.nav-link{
+    color: #020b1f;
+    font-weight: 450;
+}
+
+
+
+footer{
+    background-color: rgb(241, 243, 245);
+    padding: 1rem .875rem;
+}
+
+@media (min-width: 768px) {
+    .navbar form {
+        max-width: 320px;
+    }
+
+    .input-group-navbar .form-control:focus{
+        outline: none;
+        box-shadow: 0 0 0 0 rgb(215, 215, 215);
+    }
+
+    .input-group-navbar .form-control{
+        color: #3e4455;
+    }
+
+    .form-control::placeholder{
+        background-color: #FFF;
+    }
+
+    .input-group-navbar .btn{
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    .navbar-expand .navbar-nav .dropdown-menu{
+        box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .05);
+    }
+
+    .demo{
+        font-size: 0.8rem;
+        width: 25ch;
+        animation: typing 1s steps(25), blink .5s infinite step-end alternate;
+    }
+    
+
+
+}
+
+
+/*---> Estilos para el inicio*/
+
+.text-center{
+    color: #FFF;
+}
+
+#t-contorno{
+        color: white;
+        text-shadow:
+            -2px -2px 0 #000,
+             2px -2px 0 #000,
+            -2px  2px 0 #000,
+             2px  2px 0 #000;
+}
+
+
+.demo{
+    font-size: 1.6rem;
+    color: white;
+    text-shadow:
+            -2px -2px 0 #000,
+             2px -2px 0 #000,
+            -2px  2px 0 #000,
+             2px  2px 0 #000;
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 19ch;
+    animation: typing 2s steps(19), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing{
+    from {width: 0}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+/* Para pantallas de tamaño medio */
+@media screen and (max-width: 768px) {
+    .demo {
+        font-size: 1.2rem;
+        width: 19ch;
+        animation: typing 1.5s steps(19), blink .5s infinite step-end alternate;
+    }
+}
+
+/* Para pantallas pequeñas */
+@media screen and (max-width: 275px) {
+    .demo {
+        opacity: 0;
+    }
+
+    #t-contorno{
+        opacity: 0;
+    }
+}
+
+
+.card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  .feature-icon-small {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  
